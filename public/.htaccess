@@ -37,7 +37,7 @@ DirectoryIndex index.php
   # Starter CSP — allows Google Fonts and the Heart Internet status feed.
   Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://www.heartstatus.uk; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
   # HSTS (enable once HTTPS is confirmed everywhere)
-  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
 
 # --- Compression -----------------------------------------------------------
