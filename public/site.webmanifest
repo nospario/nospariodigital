@@ -1,0 +1,14 @@
+{
+  "name": "Nospario Digital",
+  "short_name": "Nospario",
+  "description": "Websites, software & hosting for small businesses and start-ups.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FCFBFA",
+  "theme_color": "#FCFBFA",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

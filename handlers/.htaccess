@@ -1,0 +1,3 @@
+# /src is not web-accessible. If the host cannot move the document root to
+# /public, this denies all direct requests to PHP logic and config here.
+Require all denied

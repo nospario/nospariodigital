@@ -1,0 +1,30 @@
+services:
+  web:
+    build: .
+    image: nospario-web
+    ports:
+      - "8088:80"
+    # SMTP creds + recipient. Copy .env.example to .env first; the file is
+    # optional so the container still boots without it.
+    env_file:
+      - path: .env
+        required: false
+    restart: unless-stopped
+    # ---- Local development ----
+    # Uncomment to live-edit code without rebuilding. Note: this shadows the
+    # image's /var/www/html/vendor, so run `composer install` on the host (or
+    # mount only the dirs you edit) if you need PHPMailer locally.
+    # volumes:
+    #   - ./public:/var/www/html/public
+    #   - ./src:/var/www/html/src
+    #   - ./handlers:/var/www/html/handlers
+
+  # ---- Local mail-catcher (testing only) ----
+  # Catches every outgoing message instead of delivering it. Point the app at
+  # it via .env: SMTP_HOST=mailpit, SMTP_PORT=1025, SMTP_SECURE= (blank).
+  # View caught mail at http://localhost:8025
+  mailpit:
+    image: axllent/mailpit
+    ports:
+      - "8025:8025"   # web UI
+    restart: unless-stopped

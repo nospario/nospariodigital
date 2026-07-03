@@ -1,0 +1,26 @@
+# Secrets — never bake into the image
+.env
+
+# Prototype source (visual reference only — must not ship)
+*.dc.html
+image-slot.js
+support.js
+uploads/
+
+# Dependencies (vendor/ is rebuilt in the image; node_modules unused)
+vendor/
+node_modules/
+
+# VCS / tooling / OS cruft
+.git/
+.gitignore
+.idea/
+.vscode/
+.DS_Store
+*.log
+
+# Docs + Docker context not needed inside the image
+README.md
+docker-compose.yml
+.dockerignore
+Dockerfile

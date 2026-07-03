@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Dependencies
+/vendor/
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Prototype source (visual reference only — do not ship)
+*.dc.html
+image-slot.js
+support.js
+/uploads/
+
+# Logs
+*.log

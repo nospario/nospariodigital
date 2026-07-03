@@ -1,0 +1,13 @@
+{
+    "name": "nospario/website",
+    "description": "Nospario Digital marketing site.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.1",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
