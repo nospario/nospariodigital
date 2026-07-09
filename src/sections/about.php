@@ -28,8 +28,8 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="va
 
     <div class="founder">
       <div class="founder__aside">
-        <?php if (is_file(dirname(__DIR__, 2) . '/public/assets/img/richard.jpg')): ?>
-          <img class="founder__photo" src="<?= e(asset('img/richard.jpg')) ?>" alt="Richard, founder of Nospario Digital" width="200" height="250" loading="lazy">
+        <?php if (is_file(dirname(__DIR__, 2) . '/public/assets/img/richard-website.jpg')): ?>
+          <img class="founder__photo" src="<?= e(asset('img/richard-website.jpg')) ?>" alt="Richard, founder of Nospario Digital" width="409" height="500" loading="lazy">
         <?php else: ?>
           <div class="founder__photo founder__photo--placeholder" aria-hidden="true">Richard</div>
         <?php endif; ?>
