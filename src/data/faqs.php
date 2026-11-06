@@ -35,6 +35,11 @@ return [
 
     'support' => [
         [
+            'q'    => 'How do I set up my email on my phone or computer?',
+            'a'    => "We've written a simple step-by-step guide for iPhone, iPad, Android, Outlook and Mac.",
+            'link' => ['href' => '/email-setup', 'label' => 'Read the email setup guide'],
+        ],
+        [
             'q' => 'How quickly will you respond to a ticket?',
             'a' => 'We aim to acknowledge every ticket the same working day, and prioritise anything affecting a live website or email.',
         ],

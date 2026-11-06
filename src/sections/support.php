@@ -137,7 +137,8 @@ $ticketErr  = (($_GET['error'] ?? '') === 'ticket');
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
               </span>
             </summary>
-            <p class="accordion__panel"><?= e($f['a']) ?></p>
+            <p class="accordion__panel"><?= e($f['a']) ?><?php if (!empty($f['link'])): ?>
+              <a class="accordion__link" href="<?= e($f['link']['href']) ?>"><?= e($f['link']['label']) ?> &rarr;</a><?php endif; ?></p>
           </details>
         <?php endforeach; ?>
       </div>

@@ -55,3 +55,19 @@ if (!function_exists('load_data')) {
         return is_file($full) ? (array) require $full : [];
     }
 }
+
+if (!function_exists('fmt')) {
+    /**
+     * Escape text, then turn **bold** into <strong>, `code` into <code>
+     * and [text](url) into a link.
+     * Used for content strings in data files (e.g. data/email-guide.php).
+     */
+    function fmt(string $text, string $codeClass = 'gcode'): string
+    {
+        $html = e($text);
+        $html = preg_replace('/\*\*(.+?)\*\*/', '<strong>$1</strong>', $html);
+        $html = preg_replace('/`(.+?)`/', '<code class="' . e($codeClass) . '">$1</code>', $html);
+        // [text](/path) or [text](https://…) → link (text and URL already escaped above).
+        return preg_replace('#\[([^\]]+)\]\((/[^)\s]*|https?://[^)\s]+)\)#', '<a href="$2">$1</a>', $html);
+    }
+}
